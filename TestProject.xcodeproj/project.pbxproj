@@ -8,6 +8,9 @@
 
 /* Begin PBXBuildFile section */
 		A01A30FE16A01DAD00BA8197 /* BSKeyboardControls.m in Sources */ = {isa = PBXBuildFile; fileRef = A01A30FD16A01DAD00BA8197 /* BSKeyboardControls.m */; };
+		A024D33816A3C5570082DAA4 /* MapViewViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = A024D33716A3C5570082DAA4 /* MapViewViewController.m */; };
+		A024D33B16A3C6220082DAA4 /* MapKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A024D33A16A3C6220082DAA4 /* MapKit.framework */; };
+		A024D33D16A3C6290082DAA4 /* CoreLocation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A024D33C16A3C6290082DAA4 /* CoreLocation.framework */; };
 		A037CAC616A10B6C00D4D2A5 /* AddReminderViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = A037CAC516A10B6C00D4D2A5 /* AddReminderViewController.m */; };
 		A0453AA8169D0C9E002305CD /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A0453AA7169D0C9E002305CD /* UIKit.framework */; };
 		A0453AAA169D0C9E002305CD /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A0453AA9169D0C9E002305CD /* Foundation.framework */; };
@@ -27,6 +30,10 @@
 /* Begin PBXFileReference section */
 		A01A30FC16A01DAD00BA8197 /* BSKeyboardControls.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = BSKeyboardControls.h; path = TestProject/BSKeyboardControls.h; sourceTree = "<group>"; };
 		A01A30FD16A01DAD00BA8197 /* BSKeyboardControls.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = BSKeyboardControls.m; path = TestProject/BSKeyboardControls.m; sourceTree = "<group>"; };
+		A024D33616A3C5570082DAA4 /* MapViewViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MapViewViewController.h; sourceTree = "<group>"; };
+		A024D33716A3C5570082DAA4 /* MapViewViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MapViewViewController.m; sourceTree = "<group>"; };
+		A024D33A16A3C6220082DAA4 /* MapKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MapKit.framework; path = System/Library/Frameworks/MapKit.framework; sourceTree = SDKROOT; };
+		A024D33C16A3C6290082DAA4 /* CoreLocation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreLocation.framework; path = System/Library/Frameworks/CoreLocation.framework; sourceTree = SDKROOT; };
 		A037CAC416A10B6C00D4D2A5 /* AddReminderViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AddReminderViewController.h; sourceTree = "<group>"; };
 		A037CAC516A10B6C00D4D2A5 /* AddReminderViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AddReminderViewController.m; sourceTree = "<group>"; };
 		A0453AA3169D0C9E002305CD /* TestProject.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = TestProject.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -55,6 +62,8 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				A024D33D16A3C6290082DAA4 /* CoreLocation.framework in Frameworks */,
+				A024D33B16A3C6220082DAA4 /* MapKit.framework in Frameworks */,
 				A0453AA8169D0C9E002305CD /* UIKit.framework in Frameworks */,
 				A0453AAA169D0C9E002305CD /* Foundation.framework in Frameworks */,
 				A0453AAC169D0C9E002305CD /* CoreGraphics.framework in Frameworks */,
@@ -105,6 +114,8 @@
 		A0453AA6169D0C9E002305CD /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				A024D33C16A3C6290082DAA4 /* CoreLocation.framework */,
+				A024D33A16A3C6220082DAA4 /* MapKit.framework */,
 				A0453AA7169D0C9E002305CD /* UIKit.framework */,
 				A0453AA9169D0C9E002305CD /* Foundation.framework */,
 				A0453AAB169D0C9E002305CD /* CoreGraphics.framework */,
@@ -129,6 +140,8 @@
 				A09B6020169FE00A0008F7EC /* LocationsTableViewController.m */,
 				A037CAC416A10B6C00D4D2A5 /* AddReminderViewController.h */,
 				A037CAC516A10B6C00D4D2A5 /* AddReminderViewController.m */,
+				A024D33616A3C5570082DAA4 /* MapViewViewController.h */,
+				A024D33716A3C5570082DAA4 /* MapViewViewController.m */,
 			);
 			path = TestProject;
 			sourceTree = "<group>";
@@ -206,6 +219,7 @@
 				A09B6021169FE00A0008F7EC /* LocationsTableViewController.m in Sources */,
 				A01A30FE16A01DAD00BA8197 /* BSKeyboardControls.m in Sources */,
 				A037CAC616A10B6C00D4D2A5 /* AddReminderViewController.m in Sources */,
+				A024D33816A3C5570082DAA4 /* MapViewViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

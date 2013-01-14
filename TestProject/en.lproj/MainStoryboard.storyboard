@@ -85,10 +85,10 @@
             </objects>
             <point key="canvasLocation" x="1396" y="59"/>
         </scene>
-        <!--View Controller-->
+        <!--Map View View Controller-->
         <scene sceneID="MP6-8C-Mn3">
             <objects>
-                <viewController id="VaW-aJ-tah" sceneMemberID="viewController">
+                <viewController id="VaW-aJ-tah" customClass="MapViewViewController" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="XJR-9F-HBY">
                         <rect key="frame" x="0.0" y="64" width="320" height="504"/>
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
@@ -104,6 +104,10 @@
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" id="ShE-wz-YxZ"/>
+                    <connections>
+                        <outlet property="MapView" destination="oIL-LZ-bqj" id="06x-jH-isU"/>
+                        <outlet property="mapView" destination="oIL-LZ-bqj" id="rSq-hQ-yIn"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="hZo-Nb-SLY" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
@@ -262,6 +266,13 @@
                 <relationship kind="action" name="btnSaveClicked:"/>
                 <relationship kind="outlet" name="txtDescription" candidateClass="UITextView"/>
                 <relationship kind="outlet" name="txtTitle" candidateClass="UITextField"/>
+            </relationships>
+        </class>
+        <class className="MapViewViewController" superclassName="UIViewController">
+            <source key="sourceIdentifier" type="project" relativePath="./Classes/MapViewViewController.h"/>
+            <relationships>
+                <relationship kind="outlet" name="MapView" candidateClass="MKMapView"/>
+                <relationship kind="outlet" name="mapView" candidateClass="MKMapView"/>
             </relationships>
         </class>
         <class className="NSLayoutConstraint" superclassName="NSObject">
