@@ -9,5 +9,6 @@
 #import <UIKit/UIKit.h>
 
 @interface MapViewViewController : UIViewController
-
+@property (nonatomic,strong) NSArray *annotations;
+- (void)handleLongPress:(UIGestureRecognizer *)gestureRecognizer;
 @end
