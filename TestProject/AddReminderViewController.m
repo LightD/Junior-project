@@ -30,6 +30,12 @@ txtTitle = _txtTitle;
     return self;
 }
 
+-(void) prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender{
+    if([segue.identifier isEqualToString:@"select location"]){
+        NSLog(@"prepare for segue `select location` going to table view controller");
+    }
+}
+
 - (IBAction)btnSaveClicked:(id)sender
 {
     // save all the data and go back to the previous view controller ( pop the current view controller

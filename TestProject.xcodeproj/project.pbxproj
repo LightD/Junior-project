@@ -11,6 +11,12 @@
 		A024D33816A3C5570082DAA4 /* MapViewViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = A024D33716A3C5570082DAA4 /* MapViewViewController.m */; };
 		A024D33B16A3C6220082DAA4 /* MapKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A024D33A16A3C6220082DAA4 /* MapKit.framework */; };
 		A024D33D16A3C6290082DAA4 /* CoreLocation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A024D33C16A3C6290082DAA4 /* CoreLocation.framework */; };
+		A024D34C16A51D200082DAA4 /* Location+Annotation.m in Sources */ = {isa = PBXBuildFile; fileRef = A024D34B16A51D200082DAA4 /* Location+Annotation.m */; };
+		A024D35916A5250D0082DAA4 /* ManagedObjectContextSingleton.m in Sources */ = {isa = PBXBuildFile; fileRef = A024D35816A5250D0082DAA4 /* ManagedObjectContextSingleton.m */; };
+		A028508E16A69E34004F27F3 /* ManagedDocumentSingleton.m in Sources */ = {isa = PBXBuildFile; fileRef = A028508D16A69E34004F27F3 /* ManagedDocumentSingleton.m */; };
+		A028509116A6A7CA004F27F3 /* CoreDataTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = A028509016A6A7CA004F27F3 /* CoreDataTableViewController.m */; };
+		A02850A316A6B794004F27F3 /* Reminder.m in Sources */ = {isa = PBXBuildFile; fileRef = A02850A216A6B794004F27F3 /* Reminder.m */; };
+		A02850A616A6B795004F27F3 /* Location.m in Sources */ = {isa = PBXBuildFile; fileRef = A02850A516A6B795004F27F3 /* Location.m */; };
 		A037CAC616A10B6C00D4D2A5 /* AddReminderViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = A037CAC516A10B6C00D4D2A5 /* AddReminderViewController.m */; };
 		A0453AA8169D0C9E002305CD /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A0453AA7169D0C9E002305CD /* UIKit.framework */; };
 		A0453AAA169D0C9E002305CD /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A0453AA9169D0C9E002305CD /* Foundation.framework */; };
@@ -23,8 +29,9 @@
 		A0453ABE169D0C9E002305CD /* Default-568h@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = A0453ABD169D0C9E002305CD /* Default-568h@2x.png */; };
 		A0453AC1169D0C9F002305CD /* MainStoryboard.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A0453ABF169D0C9F002305CD /* MainStoryboard.storyboard */; };
 		A09B6021169FE00A0008F7EC /* LocationsTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = A09B6020169FE00A0008F7EC /* LocationsTableViewController.m */; };
+		A09DDB1216A63DE800825FF5 /* CoreData.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A09DDB1116A63DE700825FF5 /* CoreData.framework */; };
+		A09DDBAF16A667C500825FF5 /* Reminders.xcdatamodeld in Resources */ = {isa = PBXBuildFile; fileRef = A0A5E68E169EA9710044E86B /* Reminders.xcdatamodeld */; };
 		A0A5E690169EA9710044E86B /* Reminders.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = A0A5E68E169EA9710044E86B /* Reminders.xcdatamodeld */; };
-		A0E691C6169F175900551FEA /* LocationsFetcherTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = A0E691C5169F175900551FEA /* LocationsFetcherTableViewController.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -34,6 +41,18 @@
 		A024D33716A3C5570082DAA4 /* MapViewViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MapViewViewController.m; sourceTree = "<group>"; };
 		A024D33A16A3C6220082DAA4 /* MapKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MapKit.framework; path = System/Library/Frameworks/MapKit.framework; sourceTree = SDKROOT; };
 		A024D33C16A3C6290082DAA4 /* CoreLocation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreLocation.framework; path = System/Library/Frameworks/CoreLocation.framework; sourceTree = SDKROOT; };
+		A024D34A16A51D200082DAA4 /* Location+Annotation.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = "Location+Annotation.h"; path = "TestProject/Location+Annotation.h"; sourceTree = "<group>"; };
+		A024D34B16A51D200082DAA4 /* Location+Annotation.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = "Location+Annotation.m"; path = "TestProject/Location+Annotation.m"; sourceTree = "<group>"; };
+		A024D35716A5250C0082DAA4 /* ManagedObjectContextSingleton.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = ManagedObjectContextSingleton.h; path = TestProject/ManagedObjectContextSingleton.h; sourceTree = "<group>"; };
+		A024D35816A5250D0082DAA4 /* ManagedObjectContextSingleton.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = ManagedObjectContextSingleton.m; path = TestProject/ManagedObjectContextSingleton.m; sourceTree = "<group>"; };
+		A028508C16A69E34004F27F3 /* ManagedDocumentSingleton.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ManagedDocumentSingleton.h; sourceTree = "<group>"; };
+		A028508D16A69E34004F27F3 /* ManagedDocumentSingleton.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ManagedDocumentSingleton.m; sourceTree = "<group>"; };
+		A028508F16A6A7CA004F27F3 /* CoreDataTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CoreDataTableViewController.h; sourceTree = "<group>"; };
+		A028509016A6A7CA004F27F3 /* CoreDataTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CoreDataTableViewController.m; sourceTree = "<group>"; };
+		A02850A116A6B794004F27F3 /* Reminder.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = Reminder.h; path = TestProject/Reminder.h; sourceTree = "<group>"; };
+		A02850A216A6B794004F27F3 /* Reminder.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = Reminder.m; path = TestProject/Reminder.m; sourceTree = "<group>"; };
+		A02850A416A6B795004F27F3 /* Location.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = Location.h; path = TestProject/Location.h; sourceTree = "<group>"; };
+		A02850A516A6B795004F27F3 /* Location.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = Location.m; path = TestProject/Location.m; sourceTree = "<group>"; };
 		A037CAC416A10B6C00D4D2A5 /* AddReminderViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AddReminderViewController.h; sourceTree = "<group>"; };
 		A037CAC516A10B6C00D4D2A5 /* AddReminderViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AddReminderViewController.m; sourceTree = "<group>"; };
 		A0453AA3169D0C9E002305CD /* TestProject.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = TestProject.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -52,9 +71,8 @@
 		A0453AC0169D0C9F002305CD /* en */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = en; path = en.lproj/MainStoryboard.storyboard; sourceTree = "<group>"; };
 		A09B601F169FE00A0008F7EC /* LocationsTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LocationsTableViewController.h; sourceTree = "<group>"; };
 		A09B6020169FE00A0008F7EC /* LocationsTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LocationsTableViewController.m; sourceTree = "<group>"; };
+		A09DDB1116A63DE700825FF5 /* CoreData.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreData.framework; path = System/Library/Frameworks/CoreData.framework; sourceTree = SDKROOT; };
 		A0A5E68F169EA9710044E86B /* Reminders.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = Reminders.xcdatamodel; sourceTree = "<group>"; };
-		A0E691C4169F175900551FEA /* LocationsFetcherTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LocationsFetcherTableViewController.h; sourceTree = "<group>"; };
-		A0E691C5169F175900551FEA /* LocationsFetcherTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LocationsFetcherTableViewController.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -62,6 +80,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				A09DDB1216A63DE800825FF5 /* CoreData.framework in Frameworks */,
 				A024D33D16A3C6290082DAA4 /* CoreLocation.framework in Frameworks */,
 				A024D33B16A3C6220082DAA4 /* MapKit.framework in Frameworks */,
 				A0453AA8169D0C9E002305CD /* UIKit.framework in Frameworks */,
@@ -73,6 +92,37 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		A024D35A16A525170082DAA4 /* CoreData things */ = {
+			isa = PBXGroup;
+			children = (
+				A02850A416A6B795004F27F3 /* Location.h */,
+				A02850A516A6B795004F27F3 /* Location.m */,
+				A02850A116A6B794004F27F3 /* Reminder.h */,
+				A02850A216A6B794004F27F3 /* Reminder.m */,
+				A024D35716A5250C0082DAA4 /* ManagedObjectContextSingleton.h */,
+				A024D35816A5250D0082DAA4 /* ManagedObjectContextSingleton.m */,
+				A024D34A16A51D200082DAA4 /* Location+Annotation.h */,
+				A024D34B16A51D200082DAA4 /* Location+Annotation.m */,
+				A0A5E68E169EA9710044E86B /* Reminders.xcdatamodeld */,
+				A028508C16A69E34004F27F3 /* ManagedDocumentSingleton.h */,
+				A028508D16A69E34004F27F3 /* ManagedDocumentSingleton.m */,
+				A028508F16A6A7CA004F27F3 /* CoreDataTableViewController.h */,
+				A028509016A6A7CA004F27F3 /* CoreDataTableViewController.m */,
+			);
+			name = "CoreData things";
+			sourceTree = "<group>";
+		};
+		A028508B16A692FF004F27F3 /* Supporting files */ = {
+			isa = PBXGroup;
+			children = (
+				A0453AB3169D0C9E002305CD /* main.m */,
+				A0453AAF169D0C9E002305CD /* TestProject-Info.plist */,
+				A0453AB0169D0C9E002305CD /* InfoPlist.strings */,
+				A0453AB5169D0C9E002305CD /* TestProject-Prefix.pch */,
+			);
+			name = "Supporting files";
+			sourceTree = "<group>";
+		};
 		A037CAC216A10AB600D4D2A5 /* BSKeyboardControls */ = {
 			isa = PBXGroup;
 			children = (
@@ -95,6 +145,7 @@
 		A0453A98169D0C9E002305CD = {
 			isa = PBXGroup;
 			children = (
+				A024D35A16A525170082DAA4 /* CoreData things */,
 				A037CAC716A1174400D4D2A5 /* Images */,
 				A037CAC216A10AB600D4D2A5 /* BSKeyboardControls */,
 				A0453AAD169D0C9E002305CD /* TestProject */,
@@ -114,6 +165,7 @@
 		A0453AA6169D0C9E002305CD /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				A09DDB1116A63DE700825FF5 /* CoreData.framework */,
 				A024D33C16A3C6290082DAA4 /* CoreLocation.framework */,
 				A024D33A16A3C6220082DAA4 /* MapKit.framework */,
 				A0453AA7169D0C9E002305CD /* UIKit.framework */,
@@ -126,16 +178,10 @@
 		A0453AAD169D0C9E002305CD /* TestProject */ = {
 			isa = PBXGroup;
 			children = (
+				A028508B16A692FF004F27F3 /* Supporting files */,
 				A0453AB6169D0C9E002305CD /* AppDelegate.h */,
 				A0453AB7169D0C9E002305CD /* AppDelegate.m */,
 				A0453ABF169D0C9F002305CD /* MainStoryboard.storyboard */,
-				A0453AB3169D0C9E002305CD /* main.m */,
-				A0453AAF169D0C9E002305CD /* TestProject-Info.plist */,
-				A0453AB0169D0C9E002305CD /* InfoPlist.strings */,
-				A0453AB5169D0C9E002305CD /* TestProject-Prefix.pch */,
-				A0A5E68E169EA9710044E86B /* Reminders.xcdatamodeld */,
-				A0E691C4169F175900551FEA /* LocationsFetcherTableViewController.h */,
-				A0E691C5169F175900551FEA /* LocationsFetcherTableViewController.m */,
 				A09B601F169FE00A0008F7EC /* LocationsTableViewController.h */,
 				A09B6020169FE00A0008F7EC /* LocationsTableViewController.m */,
 				A037CAC416A10B6C00D4D2A5 /* AddReminderViewController.h */,
@@ -197,6 +243,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				A09DDBAF16A667C500825FF5 /* Reminders.xcdatamodeld in Resources */,
 				A0453AB2169D0C9E002305CD /* InfoPlist.strings in Resources */,
 				A0453ABA169D0C9E002305CD /* Default.png in Resources */,
 				A0453ABC169D0C9E002305CD /* Default@2x.png in Resources */,
@@ -215,11 +262,16 @@
 				A0453AB4169D0C9E002305CD /* main.m in Sources */,
 				A0453AB8169D0C9E002305CD /* AppDelegate.m in Sources */,
 				A0A5E690169EA9710044E86B /* Reminders.xcdatamodeld in Sources */,
-				A0E691C6169F175900551FEA /* LocationsFetcherTableViewController.m in Sources */,
 				A09B6021169FE00A0008F7EC /* LocationsTableViewController.m in Sources */,
 				A01A30FE16A01DAD00BA8197 /* BSKeyboardControls.m in Sources */,
 				A037CAC616A10B6C00D4D2A5 /* AddReminderViewController.m in Sources */,
 				A024D33816A3C5570082DAA4 /* MapViewViewController.m in Sources */,
+				A024D34C16A51D200082DAA4 /* Location+Annotation.m in Sources */,
+				A024D35916A5250D0082DAA4 /* ManagedObjectContextSingleton.m in Sources */,
+				A028508E16A69E34004F27F3 /* ManagedDocumentSingleton.m in Sources */,
+				A028509116A6A7CA004F27F3 /* CoreDataTableViewController.m in Sources */,
+				A02850A316A6B794004F27F3 /* Reminder.m in Sources */,
+				A02850A616A6B795004F27F3 /* Location.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -347,7 +399,8 @@
 				A0A5E68F169EA9710044E86B /* Reminders.xcdatamodel */,
 			);
 			currentVersion = A0A5E68F169EA9710044E86B /* Reminders.xcdatamodel */;
-			path = Reminders.xcdatamodeld;
+			name = Reminders.xcdatamodeld;
+			path = TestProject/Reminders.xcdatamodeld;
 			sourceTree = "<group>";
 			versionGroupType = wrapper.xcdatamodel;
 		};

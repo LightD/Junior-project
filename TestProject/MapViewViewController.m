@@ -7,8 +7,7 @@
 //
 
 #import "MapViewViewController.h"
-#import <MapKit/MapKit.h>
-#import <CoreLocation/CoreLocation.h>
+
 
 @interface MapViewViewController ()
 
@@ -51,7 +50,7 @@
     UILongPressGestureRecognizer *lpgr = [[UILongPressGestureRecognizer alloc]
                                           initWithTarget:self action:@selector(handleLongPress:)];
     NSLog(@"create gesture recognizer");
-    lpgr.minimumPressDuration = 2.0; //user needs to press for 2 seconds
+    lpgr.minimumPressDuration = 1.0; //user needs to press for 2 seconds
     [self.mapView addGestureRecognizer:lpgr];
     NSLog(@"added the gesture recognizer to the map");
     
@@ -71,10 +70,11 @@
     [self.mapView convertPoint:touchPoint toCoordinateFromView:self.mapView];
     MKPointAnnotation * annot = [[MKPointAnnotation alloc] init];
     annot.coordinate = touchMapCoordinate;
+    
     [self.mapView addAnnotation:annot];
     // add the annotation to the Core Location corresponding table
     
- 
+    
 }
 
 - (void)didReceiveMemoryWarning

@@ -14,6 +14,51 @@
 
 @implementation LocationsTableViewController
 
+@synthesize managedDocument = _managedDocument;
+
+-(void)setupFetchedResultsController
+{
+    NSFetchRequest *request = [NSFetchRequest fetchRequestWithEntityName:@"Location"];
+    request.sortDescriptors = [NSArray arrayWithObject:[NSSortDescriptor sortDescriptorWithKey:@"name" ascending:YES]];
+    
+    self.fetchedResultsController = [[NSFetchedResultsController alloc] initWithFetchRequest:request managedObjectContext:self.managedDocument.managedObjectContext sectionNameKeyPath:nil cacheName:nil];
+}
+
+
+-(void)useDocument
+{
+    if(![[NSFileManager defaultManager] fileExistsAtPath:[self.managedDocument.fileURL path]]){
+        [self.managedDocument saveToURL:self.managedDocument.fileURL forSaveOperation:UIDocumentSaveForCreating completionHandler:^(BOOL success){
+            [self setupFetchedResultsController];
+        }];
+    } else if (self.managedDocument.documentState == UIDocumentStateClosed){
+        [self.managedDocument openWithCompletionHandler:^(BOOL success) {
+            [self setupFetchedResultsController];
+        }];
+    } else if (self.managedDocument.documentState == UIDocumentStateNormal){
+        [self setupFetchedResultsController];
+    }
+}
+
+-(void)setManagedDocument:(UIManagedDocument *)managedDocument
+{
+    if(managedDocument != _managedDocument){
+        _managedDocument = managedDocument;
+        [self useDocument];
+    }
+}
+
+-(void)viewWillAppear:(BOOL)animated
+{
+    [super viewWillAppear:animated];
+    if(!self.managedDocument){
+        // initialize the shared document instance..
+        NSURL *url = [[[NSFileManager defaultManager] URLsForDirectory:NSDocumentDirectory inDomains:NSUserDomainMask] lastObject];
+        url = [url URLByAppendingPathComponent:@"Locations Database"];
+        self.managedDocument = [[UIManagedDocument alloc] initWithFileURL:url];
+    }
+}
+
 - (id)initWithStyle:(UITableViewStyle)style
 {
     self = [super initWithStyle:style];
@@ -26,19 +71,7 @@
 - (void)viewDidLoad
 {
     [super viewDidLoad];
-
-    UIAlertView *alert = [[UIAlertView alloc] initWithTitle:@"Button Pressed"
-                                                    message:@"inside LocationsTbaleViewController"
-                          
-                                                   delegate:nil
-                                          cancelButtonTitle:@"OK"
-                                          otherButtonTitles:nil];
-    [alert show];
-    // Uncomment the following line to preserve selection between presentations.
-    // self.clearsSelectionOnViewWillAppear = NO;
- 
-    // Uncomment the following line to display an Edit button in the navigation bar for this view controller.
-    // self.navigationItem.rightBarButtonItem = self.editButtonItem;
+    // fetch the selected 
 }
 
 - (void)didReceiveMemoryWarning
@@ -69,6 +102,8 @@
     UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:CellIdentifier forIndexPath:indexPath];
     
     // Configure the cell...
+    Location* location = [self.fetchedResultsController objectAtIndexPath:indexPath];
+    cell.textLabel.text = location.name;
     
     return cell;
 }
