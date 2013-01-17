@@ -18,6 +18,7 @@
 @implementation ManagedDocumentSingleton
 
 @synthesize managedDocument = _managedDocument;
+static UIManagedDocument *sharedManagedDocument;
 
 -(void)setupFetchedResultsController
 {
@@ -41,27 +42,24 @@
 
 -(void)setManagedDocument:(UIManagedDocument *)managedDocument
 {
-    if(managedDocument != _managedDocument){
+    if(_managedDocument != managedDocument){
         _managedDocument = managedDocument;
         [self useDocument];
     }
 }
 
--(UIManagedDocument *)managedDocument
++(UIManagedDocument *)managedDocument
 {
     
-    if(!self.managedDocument){
+    if(!sharedManagedDocument){
         // initialize the shared document instance..
+        ManagedDocumentSingleton *managedDocumentInstance;
         NSURL *url = [[[NSFileManager defaultManager] URLsForDirectory:NSDocumentDirectory inDomains:NSUserDomainMask] lastObject];
         url = [url URLByAppendingPathComponent:@"Locations Database"];
-        self.managedDocument = [[UIManagedDocument alloc] initWithFileURL:url];
+        [managedDocumentInstance setManagedDocument: [[UIManagedDocument alloc] initWithFileURL:url]];
+        sharedManagedDocument = managedDocumentInstance;
     }
-    return self.managedDocument;
-}
-
--(void) light
-{
-    
+    return sharedManagedDocument;
 }
 
 @end

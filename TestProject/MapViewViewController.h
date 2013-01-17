@@ -13,10 +13,11 @@
 #import <CoreLocation/CoreLocation.h>
 #import <CoreData/CoreData.h>
 
-@interface MapViewViewController : UIViewController
+@interface MapViewViewController : UIViewController <MKMapViewDelegate, CLLocationManagerDelegate>
 
 @property (nonatomic,strong) NSArray *annotations;
-
+@property (nonatomic,strong) CLGeocoder *geoCoder;
+@property (nonatomic,strong) CLLocationManager *locationManager;
 
 - (void)handleLongPress:(UIGestureRecognizer *)gestureRecognizer;
 

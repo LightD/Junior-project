@@ -268,7 +268,10 @@
                 <relationship kind="outlet" name="txtTitle" candidateClass="UITextField"/>
             </relationships>
         </class>
-        <class className="LocationsTableViewController" superclassName="UITableViewController">
+        <class className="CoreDataTableViewController" superclassName="UITableViewController">
+            <source key="sourceIdentifier" type="project" relativePath="./Classes/CoreDataTableViewController.h"/>
+        </class>
+        <class className="LocationsTableViewController" superclassName="CoreDataTableViewController">
             <source key="sourceIdentifier" type="project" relativePath="./Classes/LocationsTableViewController.h"/>
         </class>
         <class className="MapViewViewController" superclassName="UIViewController">
